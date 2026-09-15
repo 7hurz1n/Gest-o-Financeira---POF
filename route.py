@@ -1,4 +1,6 @@
-from flask import Blueprint,render_template
+from flask import Blueprint,render_template, request
+from db import db
+from models import Usuario
 
 routes = Blueprint('app', __name__)
 
@@ -6,14 +8,13 @@ routes = Blueprint('app', __name__)
 def home():
     return render_template('home.html')
 
-@routes.route('/2')
-def page2():
-    return render_template('page2.html')
-
-@routes.route('/3')
-def page3():
-    return render_template('page3.html')
-
-@routes.route('/4')
-def page4():
-    return render_template('page4.html')
+@routes.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        nome = request.form['nome']
+        email = request.form['email']
+        senha = request.form['senha']
+        usuario = Usuario.query.filter_by(email=email, senha=senha).first()
+        if usuario:
+            return render_template('page2.html', usuario=usuario)
+    return render_template('login.html')
