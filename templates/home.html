@@ -10,3 +10,446 @@
     
 </body>
 </html>
+
+----------------------
+(homepage-caue)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceMEI - Dashboard</title>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="marca">
+            <div class="logo">🍦</div>
+
+            <div>
+                <h1>FinanceMEI</h1>
+                <span>Picolé do João</span>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="#" class="ativo">Visão Geral</a>
+            <a href="#">Contas</a>
+            <a href="#">Transações</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+    <main class="conteudo">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <h2>Painel Financeiro</h2>
+                <span>Visão geral das suas finanças</span>
+            </div>
+
+            <div class="acoes">
+                <button>⠿</button>
+                <button>🔔</button>
+                <div class="avatar">JS</div>
+            </div>
+
+        </header>
+
+
+        <!-- CONTAS -->
+        <section class="contas">
+
+            <article class="card conta pj">
+                <div class="card-titulo">
+                    <span>🏢</span>
+                    <h3>Empresa (PJ)</h3>
+                </div>
+
+                <strong>R$ 4.460,00</strong>
+                <span>Gastos: R$ 2.480,00/mês</span>
+            </article>
+
+
+            <article class="card conta pf">
+                <div class="card-titulo">
+                    <span>👤</span>
+                    <h3>Pessoal (PF)</h3>
+                </div>
+
+                <strong>R$ 3.340,50</strong>
+                <span>Gastos: R$ 1.180,00/mês</span>
+            </article>
+
+
+            <article class="card patrimonio">
+
+                <span>Patrimônio total consolidado</span>
+
+                <strong>R$ 7.800,50</strong>
+
+                <div>
+                    <span>Lucro líquido set.</span>
+                    <strong>+R$ 3.290,00</strong>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- MÉTRICAS -->
+        <section class="metricas">
+
+            <article class="metrica">
+                <span>↑ Receita</span>
+                <strong>R$ 6.950,00</strong>
+            </article>
+
+            <article class="metrica">
+                <span>🏢 Gasto PJ</span>
+                <strong>R$ 2.480,00</strong>
+            </article>
+
+            <article class="metrica">
+                <span>👤 Gasto PF</span>
+                <strong>R$ 1.180,00</strong>
+            </article>
+
+            <article class="metrica">
+                <span>📄 DAS MEI</span>
+                <strong>R$ 70,90</strong>
+            </article>
+
+        </section>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <section class="grid-dashboard">
+
+            <!-- GRÁFICO -->
+            <article class="card grafico">
+
+                <div class="titulo-secao">
+                    <div>
+                        <h2>Receita vs Gastos</h2>
+                        <span>Últimos 6 meses — PJ + PF</span>
+                    </div>
+
+                    <div class="filtros">
+                        <button class="ativo">Todos</button>
+                        <button>PJ</button>
+                        <button>PF</button>
+                    </div>
+                </div>
+
+                <div class="area-grafico">
+                    <!-- Gráfico -->
+    <svg
+      width="406"
+      height="270"
+      viewBox="0 0 406 270"
+      style="display:block;margin-top:12px;"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+
+      <!-- Linhas horizontais -->
+      <g stroke="#202832" stroke-width="1" stroke-dasharray="3 4">
+        <line x1="50" y1="20" x2="406" y2="20"/>
+        <line x1="50" y1="77" x2="406" y2="77"/>
+        <line x1="50" y1="134" x2="406" y2="134"/>
+        <line x1="50" y1="191" x2="406" y2="191"/>
+        <line x1="50" y1="248" x2="406" y2="248"/>
+      </g>
+
+      <!-- Linhas verticais -->
+      <g stroke="#202832" stroke-width="1" stroke-dasharray="3 4">
+        <line x1="50" y1="20" x2="50" y2="248"/>
+        <line x1="118" y1="20" x2="118" y2="248"/>
+        <line x1="186" y1="20" x2="186" y2="248"/>
+        <line x1="254" y1="20" x2="254" y2="248"/>
+        <line x1="322" y1="20" x2="322" y2="248"/>
+        <line x1="390" y1="20" x2="390" y2="248"/>
+      </g>
+
+      <!-- Valores -->
+      <g
+        fill="#637087"
+        font-size="12"
+        font-family="Arial, Helvetica, sans-serif"
+        text-anchor="end"
+      >
+        <text x="43" y="24">10000</text>
+        <text x="43" y="81">7500</text>
+        <text x="43" y="138">5000</text>
+        <text x="43" y="195">2500</text>
+        <text x="43" y="252">0</text>
+      </g>
+
+      <!-- Área Receita -->
+      <path
+        d="
+          M50 154
+          C73 149 96 141 118 134
+          C141 125 163 111 186 97
+          C209 83 232 61 254 56
+          C277 51 299 60 322 68
+          C345 75 367 78 390 83
+          L390 248
+          L50 248
+          Z
+        "
+        fill="#00b887"
+        fill-opacity="0.12"
+      />
+
+      <!-- Linha Receita -->
+      <path
+        d="
+          M50 154
+          C73 149 96 141 118 134
+          C141 125 163 111 186 97
+          C209 83 232 61 254 56
+          C277 51 299 60 322 68
+          C345 75 367 78 390 83
+        "
+        fill="none"
+        stroke="#00c98b"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
+
+      <!-- Área Gasto PJ -->
+      <path
+        d="
+          M50 209
+          C73 207 96 206 118 202
+          C141 199 163 195 186 191
+          C209 187 232 176 254 178
+          C277 179 299 183 322 187
+          C345 190 367 195 390 198
+          L390 248
+          L50 248
+          Z
+        "
+        fill="#f5a000"
+        fill-opacity="0.10"
+      />
+
+      <!-- Linha Gasto PJ -->
+      <path
+        d="
+          M50 209
+          C73 207 96 206 118 202
+          C141 199 163 195 186 191
+          C209 187 232 176 254 178
+          C277 179 299 183 322 187
+          C345 190 367 195 390 198
+        "
+        fill="none"
+        stroke="#f5a000"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
+
+      <!-- Área Gasto PF -->
+      <path
+        d="
+          M50 227
+          C73 228 96 229 118 228
+          C141 228 163 226 186 225
+          C209 224 232 222 254 222
+          C277 222 299 223 322 223
+          C345 223 367 224 390 225
+          L390 248
+          L50 248
+          Z
+        "
+        fill="#6860e8"
+        fill-opacity="0.10"
+      />
+
+      <!-- Linha Gasto PF -->
+      <path
+        d="
+          M50 227
+          C73 228 96 229 118 228
+          C141 228 163 226 186 225
+          C209 224 232 222 254 222
+          C277 222 299 223 322 223
+          C345 223 367 224 390 225
+        "
+        fill="none"
+        stroke="#6860e8"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
+
+      <!-- Meses -->
+      <g
+        fill="#637087"
+        font-size="13"
+        font-family="Arial, Helvetica, sans-serif"
+        text-anchor="middle"
+      >
+        <text x="50" y="269">Abr</text>
+        <text x="118" y="269">Mai</text>
+        <text x="186" y="269">Jun</text>
+        <text x="254" y="269">Jul</text>
+        <text x="322" y="269">Ago</text>
+        <text x="390" y="269">Set</text>
+      </g>
+
+    </svg>
+
+    <!-- Legenda -->
+    <div style="
+      display:flex;
+      align-items:center;
+      gap:22px;
+      margin-top:4px;
+      color:#68758a;
+      font-size:14px;
+    ">
+
+      <div style="display:flex;align-items:center;gap:7px;">
+        <span style="
+          width:13px;
+          height:13px;
+          border-radius:50%;
+          background:#00c98b;
+          display:block;
+        "></span>
+        Receita
+      </div>
+
+      <div style="display:flex;align-items:center;gap:7px;">
+        <span style="
+          width:13px;
+          height:13px;
+          border-radius:50%;
+          background:#f5a000;
+          display:block;
+        "></span>
+        Gasto PJ
+      </div>
+
+      <div style="display:flex;align-items:center;gap:7px;">
+        <span style="
+          width:13px;
+          height:13px;
+          border-radius:50%;
+          background:#6860e8;
+          display:block;
+        "></span>
+        Gasto PF
+      </div>
+
+    </div>
+
+  </div>
+                
+            </article>
+
+
+            <!-- GASTOS -->
+            <div class="coluna-gastos">
+
+                <article class="card gastos">
+                    <div class="titulo-secao">
+                        <h2>🏢 Gastos da Empresa (PJ)</h2>
+                        <strong>R$ 2.480,00</strong>
+                    </div>
+
+                    <div class="categoria">
+                        <span>🥫 Ingredientes</span>
+                        <strong>R$ 980,00</strong>
+                    </div>
+
+                    <div class="categoria">
+                        <span>📦 Embalagens</span>
+                        <strong>R$ 320,00</strong>
+                    </div>
+
+                    <div class="categoria">
+                        <span>⛽ Gás e combustível</span>
+                        <strong>R$ 180,00</strong>
+                    </div>
+
+                    <div class="categoria">
+                        <span>🔧 Manutenção</span>
+                        <strong>R$ 150,00</strong>
+                    </div>
+
+                    <div class="categoria">
+                        <span>📄 MEI / Impostos</span>
+                        <strong>R$ 70,00</strong>
+                    </div>
+
+                </article>
+
+
+                <article class="card gastos">
+                    <div class="titulo-secao">
+                        <h2>👤 Gastos Pessoais (PF)</h2>
+                        <strong>R$ 1.180,00</strong>
+                    </div>
+
+                    <div class="categoria">
+                        <span>🏠 Moradia</span>
+                        <strong>R$ 600,00</strong>
+                    </div>
+
+                    <div class="categoria">
+                        <span>🍽️ Alimentação</span>
+                        <strong>R$ 380,00</strong>
+                    </div>
+
+                    <div class="categoria">
+                        <span>🚌 Transporte</span>
+                        <strong>R$ 120,00</strong>
+                    </div>
+
+                    <div class="categoria">
+                        <span>💊 Saúde</span>
+                        <strong>R$ 80,00</strong>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- DICA -->
+        <section class="dica">
+
+            <span>💡</span>
+
+            <div>
+                <h3>Dica financeira</h3>
+                <p>
+                    Seus gastos com ingredientes representam 28% da receita —
+                    a margem está saudável. Considere comprar frutas em atacado para reduzir esse custo em até 15%.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
