@@ -18,3 +18,7 @@ def login():
         if usuario:
             return render_template('page2.html', usuario=usuario)
     return render_template('login.html')
+
+@routes.route('/aulas')
+def aulas():
+    return render_template('aulas.html')

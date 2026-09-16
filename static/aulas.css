@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --background: #0d1117;
+  --foreground: #e6edf3;
+  --card: #161b22;
+  --card-foreground: #e6edf3;
+  --primary: #10b981;
+  --primary-foreground: #0d1117;
+  --secondary: #1f2937;
+  --secondary-foreground: #9ca3af;
+  --muted: #1c2333;
+  --muted-foreground: #6b7280;
+  --accent: #10b981;
+  --accent-foreground: #0d1117;
+  --border: #21262d;
+  --ring: #10b981;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Esconde a barra de rolagem mantendo a função de rolar */
+::-webkit-scrollbar { width: 0px; }
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.voltar {
+    display: inline-block;
+    color: var(--foreground);
+    text-decoration: none;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.voltar:hover {
+    color: var(--primary);
+}
+
+.header-secao {
+    margin-bottom: 32px;
+}
+
+.header-secao h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.header-secao p {
+    color: var(--secondary-foreground);
+    font-size: 15px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.stat-card .numero {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-family: var(--font-mono);
+}
+
+.stat-card .rotulo {
+    font-size: 13px;
+    color: var(--secondary-foreground);
+}
+
+.aulas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.aula-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: var(--radius);
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    color: var(--foreground);
+    transition: border-color 0.2s;
+}
+
+.aula-card:hover {
+    border-color: var(--primary);
+}
+
+.aula-icone {
+    font-size: 24px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.aula-info {
+    flex: 1;
+}
+
+.aula-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.tempo-aula {
+    color: var(--secondary-foreground);
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badge.concluido {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--primary);
+}
+
+.badge.andamento {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+}
+
+.badge.nao-iniciado {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+}
+
+.aula-titulo {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.aula-descricao {
+    font-size: 14px;
+    color: var(--secondary-foreground);
+    line-height: 1.4;
+}
+
+.barra-progresso-container {
+    background-color: var(--secondary);
+    height: 6px;
+    border-radius: 3px;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.barra-progresso-preenchida {
+    background-color: var(--primary);
+    height: 100%;
+}
+
+/* Cores específicas para os números dos cards de estatísticas */
+.stat-card.concluidas .numero {
+    color: #10b981; /* Verde */
+}
+
+.stat-card.andamento .numero {
+    color: #f59e0b; /* Laranja / Amarelo */
+}
+
+.stat-card.nao-iniciadas .numero {
+    color: #9ca3af; /* Cinza claro */
+}
+
+.stat-card.tempo .numero {
+    color: #60a5fa; /* Azul */
+}
