@@ -3,69 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome to the Home Page</h1>
-    
-</body>
-</html>
-
-----------------------
-(homepage-caue)
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceMEI - Dashboard</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
-
-<div class="dashboard">
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-
+    <!-- HEADER -->
+    <header class="header">
         <div class="marca">
             <div class="logo">🍦</div>
-
             <div>
                 <h1>FinanceMEI</h1>
                 <span>Picolé do João</span>
             </div>
         </div>
 
-        <nav class="menu">
-            <a href="#" class="ativo">Visão Geral</a>
-            <a href="#">Contas</a>
-            <a href="#">Transações</a>
-        </nav>
-
-    </aside>
-
+        <div class="acoes">
+            <button>⠿</button>
+            <button>🔔</button>
+            <button><a href="{{ url_for('app.login') }}">Js</a></button>
+            </div>
+        </div>
+    </header>
 
     <!-- CONTEÚDO -->
     <main class="conteudo">
-
-        <!-- HEADER -->
-        <header class="header">
-
-            <div>
-                <h2>Painel Financeiro</h2>
-                <span>Visão geral das suas finanças</span>
-            </div>
-
-            <div class="acoes">
-                <a href="{{ url_for('app.aulas') }}" class="btn-acao" title="Ir para Aulas">⠿</a>
-                <button>🔔</button>
-                <div class="avatar">JS</div>
-            </div>
-
-        </header>
-
 
         <!-- CONTAS -->
         <section class="contas">
@@ -132,7 +94,15 @@
             </article>
 
         </section>
-
+        
+        <header class="locais">
+            <nav class="menu">
+                <a href="#" class="ativo">Visão Geral</a>
+                <a href="#">Contas</a>
+                <a href="#">Transações</a>
+            </nav>
+        </header>
+        
 
         <!-- ÁREA PRINCIPAL -->
         <section class="grid-dashboard">
@@ -356,13 +326,12 @@
       </div>
 
     </div>
-
   </div>
                 
-            </article>
-
-
-            <!-- GASTOS -->
+            </article>      
+        </main>
+        <section class="grid-dashboard">
+        <!-- GASTOS -->
             <div class="coluna-gastos">
 
                 <article class="card gastos">
@@ -424,19 +393,15 @@
                         <span>💊 Saúde</span>
                         <strong>R$ 80,00</strong>
                     </div>
-
                 </article>
-
             </div>
-
         </section>
 
 
         <!-- DICA -->
-        <section class="dica">
-
+        <main class="dica">
             <span>💡</span>
-
+    
             <div>
                 <h3>Dica financeira</h3>
                 <p>
@@ -444,12 +409,8 @@
                     a margem está saudável. Considere comprar frutas em atacado para reduzir esse custo em até 15%.
                 </p>
             </div>
-
-        </section>
-
-    </main>
-
-</div>
-
-</body>
+    
+        </main>
+        
+    </body>
 </html>
