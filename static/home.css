@@ -1,0 +1,541 @@
+/* =========================================================
+   FinanceMEI — Dashboard
+   Paleta: fundo quase-preto, cards escuros, acentos por
+   categoria (laranja = PJ, roxo = PF, verde = receita/lucro).
+   Números em fonte monoespaçada para alinhar dígitos.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root {
+    /* cores base */
+    --bg: #0a0e16;
+    --bg-elevado: #121826;
+    --bg-elevado-2: #171f30;
+    --borda: rgba(255, 255, 255, 0.07);
+    --borda-forte: rgba(255, 255, 255, 0.14);
+
+    --texto-primario: #edf0f5;
+    --texto-secundario: #7c869c;
+    --texto-terciario: #4d5872;
+
+    /* acentos */
+    --laranja: #f5a623;
+    --laranja-suave: rgba(245, 166, 35, 0.12);
+    --roxo: #6f66f0;
+    --roxo-suave: rgba(111, 102, 240, 0.12);
+    --verde: #00d69a;
+    --verde-suave: rgba(0, 214, 154, 0.12);
+
+    /* layout */
+    --raio-lg: 20px;
+    --raio-md: 14px;
+    --raio-sm: 10px;
+    --largura-sidebar: 232px;
+
+    --fonte-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --fonte-numeros: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    gap: 25px;
+    background: var(--bg);
+    color: var(--texto-primario);
+    font-family: var(--fonte-base);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction:column;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+.locais{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    width: var(--largura-sidebar);
+    flex-shrink: 0;
+    padding: 28px 18px;
+    border-right: 1px solid var(--borda);
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px;
+}
+
+.marca .logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--laranja), #ff7a3d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.marca h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.marca span {
+    font-size: 12px;
+    color: var(--texto-secundario);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: var(--raio-sm);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--texto-secundario);
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu a:hover {
+    background: var(--bg-elevado);
+    color: var(--texto-primario);
+}
+
+.menu a.ativo {
+    background: var(--laranja);
+    color: #14100a;
+}
+
+.menu a.ativo:hover {
+    background: var(--laranja);
+}
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+    padding: 5px 250px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin: 18px 10px;
+    gap: 720px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--borda);
+    
+}
+
+.header h2 {
+    margin: 0 0 2px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.header span {
+    font-size: 13px;
+    color: var(--texto-secundario);
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.acoes button {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--raio-sm);
+    border: 1px solid var(--borda);
+    background: var(--bg-elevado);
+    color: var(--texto-secundario);
+    font-size: 15px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.acoes button:hover {
+    border-color: var(--borda-forte);
+    color: var(--texto-primario);
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--laranja);
+    color: #14100a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* CARD base */
+
+.card {
+    background: var(--bg-elevado);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-lg);
+    padding: 22px;
+}
+
+/* CONTAS (PJ / PF / Patrimônio) */
+
+.contas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.3fr;
+    gap: 18px;
+}
+
+.conta .card-titulo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.conta h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--texto-secundario);
+}
+
+.conta strong {
+    display: block;
+    font-family: var(--fonte-numeros);
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.conta > span {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--texto-secundario);
+}
+
+.conta.pj {
+    border-color: rgba(245, 166, 35, 0.3);
+}
+
+.conta.pj h3 {
+    color: var(--laranja);
+}
+
+.conta.pf {
+    border-color: rgba(111, 102, 240, 0.3);
+}
+
+.conta.pf h3 {
+    color: var(--roxo);
+}
+
+.patrimonio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg-elevado-2);
+}
+
+.patrimonio > span:first-child {
+    font-size: 13px;
+    color: var(--texto-secundario);
+}
+
+.patrimonio > strong {
+    font-family: var(--fonte-numeros);
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin: 8px 0 14px;
+}
+
+.patrimonio > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--borda);
+    font-size: 13px;
+    color: var(--texto-secundario);
+}
+
+.patrimonio > div strong {
+    font-family: var(--fonte-numeros);
+    font-size: 15px;
+    color: var(--verde);
+}
+
+/* MÉTRICAS */
+
+.metricas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.metrica {
+    background: var(--bg-elevado);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-md);
+    padding: 16px 18px;
+}
+
+.metrica span {
+    display: block;
+    font-size: 13px;
+    color: var(--texto-secundario);
+    margin-bottom: 10px;
+}
+
+.metrica strong {
+    font-family: var(--fonte-numeros);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* GRID PRINCIPAL (gráfico + gastos) */
+
+.grid-dashboard {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.titulo-secao h2 {
+    margin: 0 0 2px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.titulo-secao > div > span {
+    font-size: 13px;
+    color: var(--texto-secundario);
+}
+
+/* filtros do gráfico */
+
+.filtros {
+    display: flex;
+    gap: 4px;
+    background: var(--bg);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-sm);
+    padding: 3px;
+}
+
+.filtros button {
+    border: none;
+    background: transparent;
+    color: var(--texto-secundario);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.filtros button.ativo {
+    background: var(--laranja);
+    color: #14100a;
+}
+
+.area-grafico svg text {
+    user-select: none;
+}
+
+/* GASTOS (colunas laterais) */
+
+.coluna-gastos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.gastos .titulo-secao {
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.gastos strong {
+    font-family: var(--fonte-numeros);
+    font-size: 15px;
+}
+
+.categoria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid var(--borda);
+    font-size: 14px;
+    color: var(--texto-primario);
+}
+
+.categoria:first-of-type {
+    border-top: none;
+}
+
+.categoria span {
+    color: var(--texto-secundario);
+}
+
+.categoria strong {
+    font-family: var(--fonte-numeros);
+    font-weight: 500;
+    color: var(--texto-primario);
+}
+
+
+
+
+/* DICA */
+
+.dica {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: var(--laranja-suave);
+    border: 1px solid rgba(245, 166, 35, 0.25);
+    border-radius: var(--raio-md);
+    padding: 18px 20px;
+}
+
+.dica span {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.dica h3 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--laranja);
+}
+
+.dica p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--texto-secundario);
+}
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 1080px) {
+    .grid-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .contas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contas .patrimonio {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 760px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-right: none;
+        border-bottom: 1px solid var(--borda);
+        padding: 16px 20px;
+    }
+
+    .menu {
+        display: flex;
+
+    }
+
+    .contas,
+    .contas .patrimonio,
+    .metricas {
+        grid-template-columns: 1fr;
+    }
+
+    .metricas {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* acessibilidade: foco visível */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--laranja);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
