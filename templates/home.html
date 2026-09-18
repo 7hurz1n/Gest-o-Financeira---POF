@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceMEI - Dashboard</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/static/home.css">
 </head>
 
 <body>
@@ -96,11 +96,11 @@
         </section>
         
         <header class="locais">
-            <nav class="menu">
+            <div class="menu-topo">
                 <a href="#" class="ativo">Visão Geral</a>
                 <a href="#">Contas</a>
                 <a href="#">Transações</a>
-            </nav>
+            </div>
         </header>
         
 
@@ -126,30 +126,31 @@
                 <div class="area-grafico">
                     <!-- Gráfico -->
     <svg
-      width="406"
+      width="100%"
       height="270"
-      viewBox="0 0 406 270"
+      viewBox="0 0 890 270"
+      preserveAspectRatio="none"
       style="display:block;margin-top:12px;"
       xmlns="http://www.w3.org/2000/svg"
     >
 
       <!-- Linhas horizontais -->
       <g stroke="#202832" stroke-width="1" stroke-dasharray="3 4">
-        <line x1="50" y1="20" x2="406" y2="20"/>
-        <line x1="50" y1="77" x2="406" y2="77"/>
-        <line x1="50" y1="134" x2="406" y2="134"/>
-        <line x1="50" y1="191" x2="406" y2="191"/>
-        <line x1="50" y1="248" x2="406" y2="248"/>
+        <line x1="50" y1="20" x2="890" y2="20"/>
+        <line x1="50" y1="77" x2="890" y2="77"/>
+        <line x1="50" y1="134" x2="890" y2="134"/>
+        <line x1="50" y1="191" x2="890" y2="191"/>
+        <line x1="50" y1="248" x2="890" y2="248"/>
       </g>
 
       <!-- Linhas verticais -->
       <g stroke="#202832" stroke-width="1" stroke-dasharray="3 4">
         <line x1="50" y1="20" x2="50" y2="248"/>
-        <line x1="118" y1="20" x2="118" y2="248"/>
-        <line x1="186" y1="20" x2="186" y2="248"/>
-        <line x1="254" y1="20" x2="254" y2="248"/>
-        <line x1="322" y1="20" x2="322" y2="248"/>
-        <line x1="390" y1="20" x2="390" y2="248"/>
+        <line x1="214" y1="20" x2="214" y2="248"/>
+        <line x1="378" y1="20" x2="378" y2="248"/>
+        <line x1="542" y1="20" x2="542" y2="248"/>
+        <line x1="706" y1="20" x2="706" y2="248"/>
+        <line x1="870" y1="20" x2="870" y2="248"/>
       </g>
 
       <!-- Valores -->
@@ -170,12 +171,12 @@
       <path
         d="
           M50 154
-          C73 149 96 141 118 134
-          C141 125 163 111 186 97
-          C209 83 232 61 254 56
-          C277 51 299 60 322 68
-          C345 75 367 78 390 83
-          L390 248
+          C105.5 149 160.9 141 214 134
+          C269.5 125 322.5 111 378 97
+          C433.5 83 488.9 61 542 56
+          C597.5 51 650.5 60 706 68
+          C761.5 75 814.5 78 870 83
+          L870 248
           L50 248
           Z
         "
@@ -187,11 +188,11 @@
       <path
         d="
           M50 154
-          C73 149 96 141 118 134
-          C141 125 163 111 186 97
-          C209 83 232 61 254 56
-          C277 51 299 60 322 68
-          C345 75 367 78 390 83
+          C105.5 149 160.9 141 214 134
+          C269.5 125 322.5 111 378 97
+          C433.5 83 488.9 61 542 56
+          C597.5 51 650.5 60 706 68
+          C761.5 75 814.5 78 870 83
         "
         fill="none"
         stroke="#00c98b"
@@ -203,12 +204,12 @@
       <path
         d="
           M50 209
-          C73 207 96 206 118 202
-          C141 199 163 195 186 191
-          C209 187 232 176 254 178
-          C277 179 299 183 322 187
-          C345 190 367 195 390 198
-          L390 248
+          C105.5 207 160.9 206 214 202
+          C269.5 199 322.5 195 378 191
+          C433.5 187 488.9 176 542 178
+          C597.5 179 650.5 183 706 187
+          C761.5 190 814.5 195 870 198
+          L870 248
           L50 248
           Z
         "
@@ -220,11 +221,11 @@
       <path
         d="
           M50 209
-          C73 207 96 206 118 202
-          C141 199 163 195 186 191
-          C209 187 232 176 254 178
-          C277 179 299 183 322 187
-          C345 190 367 195 390 198
+          C105.5 207 160.9 206 214 202
+          C269.5 199 322.5 195 378 191
+          C433.5 187 488.9 176 542 178
+          C597.5 179 650.5 183 706 187
+          C761.5 190 814.5 195 870 198
         "
         fill="none"
         stroke="#f5a000"
@@ -236,12 +237,12 @@
       <path
         d="
           M50 227
-          C73 228 96 229 118 228
-          C141 228 163 226 186 225
-          C209 224 232 222 254 222
-          C277 222 299 223 322 223
-          C345 223 367 224 390 225
-          L390 248
+          C105.5 228 160.9 229 214 228
+          C269.5 228 322.5 226 378 225
+          C433.5 224 488.9 222 542 222
+          C597.5 222 650.5 223 706 223
+          C761.5 223 814.5 224 870 225
+          L870 248
           L50 248
           Z
         "
@@ -253,11 +254,11 @@
       <path
         d="
           M50 227
-          C73 228 96 229 118 228
-          C141 228 163 226 186 225
-          C209 224 232 222 254 222
-          C277 222 299 223 322 223
-          C345 223 367 224 390 225
+          C105.5 228 160.9 229 214 228
+          C269.5 228 322.5 226 378 225
+          C433.5 224 488.9 222 542 222
+          C597.5 222 650.5 223 706 223
+          C761.5 223 814.5 224 870 225
         "
         fill="none"
         stroke="#6860e8"
@@ -273,11 +274,11 @@
         text-anchor="middle"
       >
         <text x="50" y="269">Abr</text>
-        <text x="118" y="269">Mai</text>
-        <text x="186" y="269">Jun</text>
-        <text x="254" y="269">Jul</text>
-        <text x="322" y="269">Ago</text>
-        <text x="390" y="269">Set</text>
+        <text x="214" y="269">Mai</text>
+        <text x="378" y="269">Jun</text>
+        <text x="542" y="269">Jul</text>
+        <text x="706" y="269">Ago</text>
+        <text x="870" y="269">Set</text>
       </g>
 
     </svg>
@@ -329,8 +330,7 @@
   </div>
                 
             </article>      
-        </main>
-        <section class="grid-dashboard">
+
         <!-- GASTOS -->
             <div class="coluna-gastos">
 
@@ -397,9 +397,39 @@
             </div>
         </section>
 
+                <!-- AULAS -->
+        <section class="aulas">
+            <h2 class="aulas-titulo">Aulas para MEI</h2>
+
+            <div class="aulas-grid">
+
+                <article class="card aula">
+                    <img src="\img\Firefly_Gemini Flash.png" alt="Aula sobre precificação">
+                    <h3>Como precificar seus produtos</h3>
+                    <p>Aprenda a calcular o preço ideal considerando custos, impostos e margem de lucro.</p>
+                    <a href="{{ url_for('app.aulas') }}" class="btn-aula">Assistir aula</a>
+                </article>
+
+                <article class="card aula">
+                    <img src="\img\Firefly_Gemini Flash_preciso de uma imagem para colocar em um carde sobre -imposto para MEI-, é um card de 831993.png" alt="Aula sobre impostos MEI">
+                    <h3>Impostos do MEI descomplicados</h3>
+                    <p>Entenda o DAS, prazos de pagamento e como evitar multas e pendências.</p>
+                    <a href="{{ url_for('app.aulas') }}" class="btn-aula">Assistir aula</a>
+                </article>
+
+                <article class="card aula">
+                    <img src="\img\image_41110b0a.jpg" alt="Aula sobre organização financeira">
+                    <h3>Organizando as finanças do negócio</h3>
+                    <p>Separe as contas PJ e PF e mantenha o controle do seu fluxo de caixa.</p>
+                    <a href="{{ url_for('app.aulas') }}" class="btn-aula">Assistir aula</a>
+                </article>
+
+            </div>
+        </section>
+
 
         <!-- DICA -->
-        <main class="dica">
+        <div class="dica">
             <span>💡</span>
     
             <div>
@@ -409,6 +439,9 @@
                     a margem está saudável. Considere comprar frutas em atacado para reduzir esse custo em até 15%.
                 </p>
             </div>
+        </div>
+
+        
     
         </main>
         

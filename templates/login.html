@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfil Empreendedor - João Silva</title>
-  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="/static/login.css" />
 </head>
 <body>
-    <button id="voltar" href="home.html">← Voltar</button>
+    <button id="voltar"><a href="{{ url_for('app.home') }}">← Voltar</a></button>
     <div class="profile-container">
   <!-- Perfil Header -->
   <header class="profile-header">

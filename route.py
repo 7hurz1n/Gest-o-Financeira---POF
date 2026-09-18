@@ -21,4 +21,4 @@ def login():
 
 @routes.route('/aulas')
 def aulas():
-    return render_template('aulas.html')
+    return render_template('aulas_mei.html')

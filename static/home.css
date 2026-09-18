@@ -59,12 +59,25 @@ a {
 button {
     font-family: inherit;
 }
-
-.locais{
+.locais {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    width: 100%;
+}
+
+.menu-topo a {
+    padding: 10px 14px;
+    border-radius: var(--raio-sm);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--texto-secundario);
+    text-decoration: none;
+}
+
+.menu-topo a.ativo {
+    background: var(--laranja);
+    color: #14100a;
+    border-radius: var(--raio-sm);
 }
 
 /* =========================================================
@@ -346,7 +359,7 @@ button {
 
 .grid-dashboard {
     display: grid;
-    grid-template-columns: 1.7fr 1fr;
+    grid-template-columns: 1fr;
     gap: 18px;
     align-items: start;
 }
@@ -538,4 +551,73 @@ button:focus-visible {
     * {
         transition: none !important;
     }
+}
+/* AULAS */
+
+.aulas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.aulas-titulo {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.aulas-grid {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+}
+
+.aula {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    padding: 18px;
+    gap: 10px;
+}
+
+.aula img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: var(--raio-md);
+}
+
+.aula h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.aula p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--texto-secundario);
+    flex: 1;
+}
+
+.btn-aula {
+    display: inline-block;
+    text-align: center;
+    margin-top: 6px;
+    padding: 10px 14px;
+    border-radius: var(--raio-sm);
+    background: var(--laranja);
+    color: #14100a;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: filter 0.15s ease;
+}
+
+.btn-aula:hover {
+    filter: brightness(1.1);
 }
