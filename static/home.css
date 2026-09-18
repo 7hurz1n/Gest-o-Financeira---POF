@@ -80,20 +80,6 @@ button {
     border-radius: var(--raio-sm);
 }
 
-/* =========================================================
-   SIDEBAR
-   ========================================================= */
-
-.sidebar {
-    width: var(--largura-sidebar);
-    flex-shrink: 0;
-    padding: 28px 18px;
-    border-right: 1px solid var(--borda);
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
-}
-
 .marca {
     display: flex;
     align-items: center;
@@ -490,6 +476,22 @@ button {
     line-height: 1.55;
     color: var(--texto-secundario);
 }
+
+  .section {
+    display: none; /* All sections hidden by default */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+  }
+
+  #section1, #section2, #section3 {
+    display: none; /* Hide all sections initially */
+    border: transparent;
+  }
+  .active {
+    display: block; /* Visible section */
+  }
+
 
 /* =========================================================
    RESPONSIVO
