@@ -22,13 +22,11 @@
             <button>⠿</button>
             <button>🔔</button>
             <button><a href="{{ url_for('app.login') }}">Js</a></button>
-            </div>
         </div>
     </header>
 
     <!-- CONTEÚDO -->
     <main class="conteudo">
-
         <!-- CONTAS -->
         <section class="contas">
 
@@ -97,9 +95,9 @@
         
         <header class="locais">
             <div class="menu-topo">
-                <a href="#" class="ativo">Visão Geral</a>
-                <a href="#">Contas</a>
-                <a href="#">Transações</a>
+                <a href="#" onclick="showSection('section1')" class="ativo">Visão Geral</a>
+                <a href="#" onclick="showSection('section2')">Contas</a>
+                <a href="#" onclick="showSection('section3')">Transações</a>
             </div>
         </header>
         
@@ -125,7 +123,7 @@
 
                 <div class="area-grafico">
                     <!-- Gráfico -->
-    <svg
+    <svg id="section1" class="section"
       width="100%"
       height="270"
       viewBox="0 0 890 270"
@@ -398,27 +396,27 @@
         </section>
 
                 <!-- AULAS -->
-        <section class="aulas">
-            <h2 class="aulas-titulo">Aulas para MEI</h2>
+        <section class="aulas" style="border-top: 2px solid var(--borda); padding-top: 20px;">
+            <h1 class="aulas-titulo" style="font-weight: 300;">Aulas para MEI</h1>
 
-            <div class="aulas-grid">
+            <div class="aulas-grid" style="border-bottom: 2px solid var(--borda); padding-bottom: 20px;">
 
                 <article class="card aula">
-                    <img src="\img\Firefly_Gemini Flash.png" alt="Aula sobre precificação">
+                    <img src="\img\Firefly_Gemini Flash.png" alt="Aula sobre precificação" style="opacity: 90%">
                     <h3>Como precificar seus produtos</h3>
                     <p>Aprenda a calcular o preço ideal considerando custos, impostos e margem de lucro.</p>
                     <a href="{{ url_for('app.aulas') }}" class="btn-aula">Assistir aula</a>
                 </article>
 
                 <article class="card aula">
-                    <img src="\img\Firefly_Gemini Flash_preciso de uma imagem para colocar em um carde sobre -imposto para MEI-, é um card de 831993.png" alt="Aula sobre impostos MEI">
+                    <img src="\img\Firefly_Gemini Flash_preciso de uma imagem para colocar em um carde sobre -imposto para MEI-, é um card de 831993.png" alt="Aula sobre impostos MEI" style="opacity: 90%">
                     <h3>Impostos do MEI descomplicados</h3>
                     <p>Entenda o DAS, prazos de pagamento e como evitar multas e pendências.</p>
                     <a href="{{ url_for('app.aulas') }}" class="btn-aula">Assistir aula</a>
                 </article>
 
                 <article class="card aula">
-                    <img src="\img\image_41110b0a.jpg" alt="Aula sobre organização financeira">
+                    <img src="\img\image_41110b0a.jpg" alt="Aula sobre organização financeira" style="opacity: 90%">
                     <h3>Organizando as finanças do negócio</h3>
                     <p>Separe as contas PJ e PF e mantenha o controle do seu fluxo de caixa.</p>
                     <a href="{{ url_for('app.aulas') }}" class="btn-aula">Assistir aula</a>
@@ -444,6 +442,6 @@
         
     
         </main>
-        
+        <script src="script.js"></script>    
     </body>
 </html>
