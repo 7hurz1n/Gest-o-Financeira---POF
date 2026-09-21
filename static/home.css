@@ -477,19 +477,9 @@ button {
     color: var(--texto-secundario);
 }
 
-  .section {
-    display: none; /* All sections hidden by default */
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-  }
-
-  #section1, #section2, #section3 {
-    display: none; /* Hide all sections initially */
-    border: transparent;
-  }
   .active {
-    display: block; /* Visible section */
+    background-color: #f5a623;
+    color: black;
   }
 
 
