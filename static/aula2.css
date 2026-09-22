@@ -100,7 +100,9 @@ button { font: inherit; cursor: pointer; }
 }
 
 /* ---------- Card da aula ---------- */
-.lesson { border-top: 0; border-radius: 0 0 var(--radius-card) var(--radius-card); }
+.lesson {
+  margin-top: 20px;
+}
 
 .lesson-hero {
   height: 168px;
@@ -108,6 +110,14 @@ button { font: inherit; cursor: pointer; }
   place-items: center;
   background: var(--surface-hero);
   border-bottom: 1px solid var(--border);
+}
+
+.lesson-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 16px;
+
 }
 
 .lesson-icon {
@@ -200,6 +210,7 @@ button { font: inherit; cursor: pointer; }
   border-color: var(--green);
   color: var(--green-ink);
 }
+
 /* etapa ainda não feita */
 .step.pending .check {
   background: var(--yellow);
