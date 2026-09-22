@@ -65,20 +65,24 @@ button {
     width: 100%;
 }
 
-.menu-topo a {
+.menu-topo button {
     padding: 10px 14px;
     border-radius: var(--raio-sm);
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;;
     color: var(--texto-secundario);
-    text-decoration: none;
+    background-color: transparent;
+    border: none;
 }
 
-.menu-topo a.ativo {
+.menu-topo button.active {
     background: var(--laranja);
     color: #14100a;
     border-radius: var(--raio-sm);
 }
+
+
 
 .marca {
     display: flex;
@@ -476,11 +480,6 @@ button {
     line-height: 1.55;
     color: var(--texto-secundario);
 }
-
-  .active {
-    background-color: #f5a623;
-    color: black;
-  }
 
 
 /* =========================================================
