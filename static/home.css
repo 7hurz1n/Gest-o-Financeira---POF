@@ -74,6 +74,12 @@ button {
     color: var(--texto-secundario);
     background-color: transparent;
     border: none;
+    transition: 0.5s;
+}
+
+.menu-topo button:hover{
+    background: black;
+    color: white;
 }
 
 .menu-topo button.active {
@@ -82,7 +88,9 @@ button {
     border-radius: var(--raio-sm);
 }
 
-
+.menu-topo button:not(first:child){
+    background: red;
+}
 
 .marca {
     display: flex;
@@ -396,9 +404,15 @@ button {
     transition: background 0.15s ease, color 0.15s ease;
 }
 
-.filtros button.ativo {
+.filtros button:hover{
+    background: black;
+    color: white;
+}
+
+.filtros button.active {
     background: var(--laranja);
     color: #14100a;
+    border-radius: var(--raio-sm);
 }
 
 .area-grafico svg text {
