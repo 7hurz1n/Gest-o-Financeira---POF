@@ -48,5 +48,5 @@ btnPF.addEventListener('click', function() {
     btnPF.classList.add('active');
 
     btnPJ.classList.remove('active');
-    btnPF.classList.remove('active');
+    btnTd.classList.remove('active');
 });
