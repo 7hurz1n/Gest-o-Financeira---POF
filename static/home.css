@@ -9,14 +9,14 @@
 
 :root {
     /* cores base */
-    --bg: #0a0e16;
-    --bg-elevado: #121826;
-    --bg-elevado-2: #171f30;
-    --borda: rgba(255, 255, 255, 0.07);
-    --borda-forte: rgba(255, 255, 255, 0.14);
+    --bg: #0B0D12;
+    --bg-elevado: #171922;
+    --bg-elevado-2: #14161f;
+    --borda: #2A2F3F;
+    --borda-forte: #2A2F3F;
 
-    --texto-primario: #edf0f5;
-    --texto-secundario: #7c869c;
+    --texto-primario: #F2F3F5;
+    --texto-secundario: #8A8F9C;
     --texto-terciario: #4d5872;
 
     /* acentos */
@@ -65,8 +65,13 @@ button {
     width: 100%;
 }
 
+.menu-topo {
+    gap: 40px;
+    padding: 4px;
+}
+
 .menu-topo button {
-    padding: 10px 14px;
+    padding: 10px 80px;
     border-radius: var(--raio-sm);
     font-size: 14px;
     font-weight: 500;
@@ -74,7 +79,7 @@ button {
     color: var(--texto-secundario);
     background-color: transparent;
     border: none;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .menu-topo button:hover{
@@ -86,10 +91,6 @@ button {
     background: var(--laranja);
     color: #14100a;
     border-radius: var(--raio-sm);
-}
-
-.menu-topo button:not(first:child){
-    background: red;
 }
 
 .marca {
@@ -162,7 +163,7 @@ button {
     flex: 1;
     min-width: 0;
     justify-content: center;
-    padding: 5px 250px 24px;
+    padding: 5px 20vw 24px;
     display: flex;
     flex-direction: column;
     gap: 22px;
@@ -174,7 +175,7 @@ button {
     display: flex;
     justify-content: center;
     margin: 18px 10px;
-    gap: 720px;
+    gap: 41vw;
     padding-bottom: 18px;
     border-bottom: 2px solid var(--borda);
     
@@ -238,12 +239,13 @@ button {
 
 /* CONTAS (PJ / PF / Patrimônio) */
 
+/*
 .contas {
     display: grid;
     grid-template-columns: 1fr 1fr 1.3fr;
     gap: 18px;
 }
-
+*/
 .conta .card-titulo {
     display: flex;
     align-items: center;
@@ -297,13 +299,13 @@ button {
 }
 
 .patrimonio > span:first-child {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--texto-secundario);
 }
 
 .patrimonio > strong {
     font-family: var(--fonte-numeros);
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 600;
     letter-spacing: -0.5px;
     margin: 8px 0 14px;
@@ -315,7 +317,7 @@ button {
     justify-content: space-between;
     padding-top: 12px;
     border-top: 1px solid var(--borda);
-    font-size: 13px;
+    font-size: 13.5px;
     color: var(--texto-secundario);
 }
 
